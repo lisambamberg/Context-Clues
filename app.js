@@ -5,15 +5,13 @@ var weaponArray = ["candlestick", "knife", "lead pipe", "revolver", "rope", "wre
 for (var i = 1; i < 101; i++) {
     var h3 = document.createElement("h3");
     h3.innerText = `Accusation ${i}`;
-    h3.addEventListener("click", function () {
-        alertText();
-    })
+    h3.addEventListener("click", alertText(i));
     document.body.appendChild(h3);
 }
 
-function alertText() {
+function alertText(i) {
     return function () {
-        alert(` Accusation ${i}: I accuse ${i % friendArray.length} with the ${i % weaponArray.length} in the ${i % locationArray.length}!`)
+        alert(` Accusation ${i}: I accuse ${friendArray[i % friendArray.length]} with the ${weaponArray[i % weaponArray.length]} in the ${locationArray[i % locationArray.length]}!`)
     }
 }
 
