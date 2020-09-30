@@ -1,0 +1,5 @@
+h3:hover {
+    cursor: pointer;
+    display: inline;
+    color: rgba(224, 9, 252, 0.575);
+}
